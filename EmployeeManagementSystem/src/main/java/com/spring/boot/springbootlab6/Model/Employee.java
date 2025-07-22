@@ -22,7 +22,8 @@ public class Employee {
     @Email(message = "email must be valid!")
     private String email;
 
-    @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!") // must start with 05 and must be 10 digits
+    @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!")
+    // must start with 05 and must be 10 digits
     private String phoneNumber;
 
     @NotNull(message = "age can not be empty")
