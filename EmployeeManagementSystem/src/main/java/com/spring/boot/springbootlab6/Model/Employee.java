@@ -10,8 +10,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Employee {
 
-    @NotEmpty(message = "ID can not be empty")
-    @Size(min = 3, message = "ID must not be less than 3 characters")
+    @NotEmpty(message = "iD can not be empty")
+    @Size(min = 3, message = "iD must not be less than 3 characters")
     private String iD;
 
     @NotEmpty(message = "name can not be empty")
@@ -44,6 +44,6 @@ public class Employee {
     private LocalDate hireDate;
 
     @NotNull(message = "annualLeave can not be empty")
-    @Positive(message = "annualLeave must be a positive number")
+    @PositiveOrZero(message = "annualLeave must be a positive number")
     private int annualLeave;
 }

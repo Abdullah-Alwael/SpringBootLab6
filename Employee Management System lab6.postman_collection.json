@@ -1,0 +1,2222 @@
+{
+	"info": {
+		"_postman_id": "48369695-a660-49b9-b719-ee76e3923d48",
+		"name": "Employee Management System lab6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46809246",
+		"_collection_link": "https://abdullahalwael.postman.co/workspace/Abdullah-Alwael's-Workspace~0afd19ff-4de9-4144-8b90-6b699a18a04f/collection/46809246-48369695-a660-49b9-b719-ee76e3923d48?action=share&source=collection_link&creator=46809246"
+	},
+	"item": [
+		{
+			"name": "Add a new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mohammed\",\r\n    \"email\": \"email@mohammed.com\",\r\n    \"phoneNumber\": \"0501649080\",\r\n    \"age\": 33,\r\n    \"position\": \"supervisor\",\r\n    \"onLeave\": false,\r\n    \"hireDate\": \"2025-05-05\",\r\n    \"annualLeave\": 0,\r\n    \"id\": \"300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "iD can not be empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"ID\":\"\" ,\r\n    \"name\":\"a\",\r\n    \"email\":\"e\" ,\r\n    \"phoneNumber\":\"5\" ,\r\n    \"age\":9,\r\n    \"position\":\"c\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:05:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "iD can not be empty"
+				},
+				{
+					"name": "iD must not be less than 3 characters",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"12\" ,\r\n    \"name\":\"a\",\r\n    \"email\":\"e\" ,\r\n    \"phoneNumber\":\"5\" ,\r\n    \"age\":9,\r\n    \"position\":\"c\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:06:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "iD must not be less than 3 characters"
+				},
+				{
+					"name": "name can not be less than 5 characters",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"a\",\r\n    \"email\":\"e\" ,\r\n    \"phoneNumber\":\"5\" ,\r\n    \"age\":9,\r\n    \"position\":\"c\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:09:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "name can not be less than 5 characters"
+				},
+				{
+					"name": "email must be valid!",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"e\" ,\r\n    \"phoneNumber\":\"5\" ,\r\n    \"age\":9,\r\n    \"position\":\"c\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:09:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "email must be valid!"
+				},
+				{
+					"name": "phone number must start with 05 and must be 10 digits only!",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"5\" ,\r\n    \"age\":29,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:12:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "phone number must start with 05 and must be 10 digits only!"
+				},
+				{
+					"name": "phone number must must be 10 digits!",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"050164908\" ,\r\n    \"age\":7,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:13:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "phone number must start with 05 and must be 10 digits only!"
+				},
+				{
+					"name": "age must be older than 25",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":7,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:13:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "age must be older than 25"
+				},
+				{
+					"name": "position must be either supervisor or coordinator only (case sensitive)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordnator\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:14:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "position must be either supervisor or coordinator only (case sensitive) "
+				},
+				{
+					"name": "onLeave must be initially set to false",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":true,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:14:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "onLeave must be initially set to false"
+				},
+				{
+					"name": "hireDate can not be in the future",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2028-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:14:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "hireDate can not be in the future"
+				},
+				{
+					"name": "hireDate must not be empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":null , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:15:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "hireDate must not be empty"
+				},
+				{
+					"name": "annualLeave must be a positive number",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2025-05-05\" , \r\n    \"annualLeave\":-63\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:15:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "annualLeave must be a positive number"
+				},
+				{
+					"name": "annualLeave must not be 0",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2025-05-05\" , \r\n    \"annualLeave\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:16:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "annualLeave must be a positive number"
+				},
+				{
+					"name": "Employee added successfully",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"100\" ,\r\n    \"name\":\"Abdullah\",\r\n    \"email\":\"email@abdullah.com\" ,\r\n    \"phoneNumber\":\"0501649080\" ,\r\n    \"age\":27,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2025-05-05\" , \r\n    \"annualLeave\":28\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:16:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee added successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listed employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:26:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Abdullah\",\n        \"email\": \"email@abdullah.com\",\n        \"phoneNumber\": \"0501649080\",\n        \"age\": 27,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-05-05\",\n        \"annualLeave\": 28,\n        \"id\": \"100\"\n    },\n    {\n        \"name\": \"Ahmed\",\n        \"email\": \"email@ahmed.com\",\n        \"phoneNumber\": \"0501849080\",\n        \"age\": 27,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2024-05-05\",\n        \"annualLeave\": 23,\n        \"id\": \"200\"\n    },\n    {\n        \"name\": \"Ali Ali\",\n        \"email\": \"email@ali.com\",\n        \"phoneNumber\": \"0501349080\",\n        \"age\": 29,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2024-05-05\",\n        \"annualLeave\": 23,\n        \"id\": \"200\"\n    }\n]"
+				},
+				{
+					"name": "Empty list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:26:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Raghad\",\r\n        \"email\": \"email@raghad.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 31,\r\n        \"position\": \"coordinator\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 10,\r\n        \"id\": \"100\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/update/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"update",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"200\" ,\r\n    \"name\":\"Ali Ali\",\r\n    \"email\":\"email@ali.com\" ,\r\n    \"phoneNumber\":\"0501349080\" ,\r\n    \"age\":29,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2024-05-05\" , \r\n    \"annualLeave\":23\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/update/2000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"update",
+								"2000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:29:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee not found\"\n}"
+				},
+				{
+					"name": "Employee updated successfully ignoring the change in ID",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"iD\":\"300\" ,\r\n    \"name\":\"Ali Ali\",\r\n    \"email\":\"email@ali-ali.com\" ,\r\n    \"phoneNumber\":\"0501349080\" ,\r\n    \"age\":29,\r\n    \"position\":\"coordinator\",\r\n    \"onLeave\":false,\r\n    \"hireDate\":\"2024-09-05\" , \r\n    \"annualLeave\":36\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/update/200",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"update",
+								"200"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:30:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/delete/200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"delete",
+						"200"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error, employee not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/delete/2000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"delete",
+								"2000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:33:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee not found\"\n}"
+				},
+				{
+					"name": "Employee deleted successfully",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/delete/200",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"delete",
+								"200"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:33:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Employees by position",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/filter/by-position/coordinator",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"filter",
+						"by-position",
+						"coordinator"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "position must be either supervisor or coordinator",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-position/12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-position",
+								"12"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:36:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"position must be either supervisor or coordinator only (case sensitive) \"\n}"
+				},
+				{
+					"name": "position must be either supervisor or coordinator only (case sensitive)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-position/notAPosition",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-position",
+								"notAPosition"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:37:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"position must be either supervisor or coordinator only (case sensitive) \"\n}"
+				},
+				{
+					"name": "Empty supervisors list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-position/supervisor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-position",
+								"supervisor"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:38:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "Listed coordinators",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-position/coordinator",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-position",
+								"coordinator"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:38:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Abdullah\",\n        \"email\": \"email@abdullah.com\",\n        \"phoneNumber\": \"0501649080\",\n        \"age\": 27,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-05-05\",\n        \"annualLeave\": 28,\n        \"id\": \"100\"\n    },\n    {\n        \"name\": \"Ali Ali\",\n        \"email\": \"email@ali.com\",\n        \"phoneNumber\": \"0501349080\",\n        \"age\": 29,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2024-05-05\",\n        \"annualLeave\": 23,\n        \"id\": \"200\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search employees by age range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/filter/by-age/26/28",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"filter",
+						"by-age",
+						"26",
+						"28"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Age must be older than 25",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-age/12/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-age",
+								"12",
+								"3"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:40:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Age must be older than 25\"\n}"
+				},
+				{
+					"name": "max age can not be less than min age",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-age/28/26",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-age",
+								"28",
+								"26"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:40:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"max age can not be less than min age\"\n}"
+				},
+				{
+					"name": "Listed range 26 - 28 inclusive",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/by-age/26/28",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"by-age",
+								"26",
+								"28"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:41:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Abdullah\",\n        \"email\": \"email@abdullah.com\",\n        \"phoneNumber\": \"0501649080\",\n        \"age\": 27,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-05-05\",\n        \"annualLeave\": 28,\n        \"id\": \"100\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Apply for annual leave",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/apply-for-annual-leave/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"apply-for-annual-leave",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error, employee not found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/apply-for-annual-leave/2000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"apply-for-annual-leave",
+								"2000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:47:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee not found\"\n}"
+				},
+				{
+					"name": "Employee applied for annual leave successfully",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/apply-for-annual-leave/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"apply-for-annual-leave",
+								"100"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:47:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee applied for annual leave successfully\"\n}"
+				},
+				{
+					"name": "Error, the employee must not already be on leave",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/apply-for-annual-leave/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"apply-for-annual-leave",
+								"100"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:48:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, the employee must not already be on leave\"\n}"
+				},
+				{
+					"name": "Error, the employee must have at least one day of annual leave remaining",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/apply-for-annual-leave/200",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"apply-for-annual-leave",
+								"200"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jul 2025 10:52:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, the employee must have at least one day of annual leave remaining\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get employees without annual leave",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/filter/without-annual-leave",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"filter",
+						"without-annual-leave"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Empty list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/without-annual-leave",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"without-annual-leave"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 03:57:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "Listed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/filter/without-annual-leave",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"filter",
+								"without-annual-leave"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 03:59:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"name\": \"Abdullah\",\n        \"email\": \"email@abdullah.com\",\n        \"phoneNumber\": \"0501649080\",\n        \"age\": 29,\n        \"position\": \"supervisor\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-05-05\",\n        \"annualLeave\": 0,\n        \"id\": \"100\"\n    },\n    {\n        \"name\": \"Ahmed\",\n        \"email\": \"email@ahmed.com\",\n        \"phoneNumber\": \"0501649070\",\n        \"age\": 28,\n        \"position\": \"supervisor\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-04-05\",\n        \"annualLeave\": 0,\n        \"id\": \"200\"\n    },\n    {\n        \"name\": \"Hasan\",\n        \"email\": \"email@hasan.com\",\n        \"phoneNumber\": \"0501649060\",\n        \"age\": 26,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-03-05\",\n        \"annualLeave\": 0,\n        \"id\": \"100\"\n    },\n    {\n        \"name\": \"Raghad\",\n        \"email\": \"email@raghad.com\",\n        \"phoneNumber\": \"0501649050\",\n        \"age\": 27,\n        \"position\": \"coordinator\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-02-05\",\n        \"annualLeave\": 0,\n        \"id\": \"300\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Promote employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Mohammed\",\r\n        \"email\": \"email@mohammed.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 33,\r\n        \"position\": \"supervisor\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"300\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employee/promote/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"promote",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Employee does not exist",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Abdullah\",\r\n    \"email\": \"email@abdullah.com\",\r\n    \"phoneNumber\": \"0501649080\",\r\n    \"age\": 29,\r\n    \"position\": \"supervisor\",\r\n    \"onLeave\": false,\r\n    \"hireDate\": \"2025-05-05\",\r\n    \"annualLeave\": 0,\r\n    \"id\": \"100\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/3000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"3000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:04:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee not found\"\n}"
+				},
+				{
+					"name": "Error, requester must be a supervisor",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Hassan\",\r\n        \"email\": \"email@raghad.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 32,\r\n        \"position\": \"coordinator\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"200\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"100"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:09:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, requester must be a supervisor\"\n}"
+				},
+				{
+					"name": "Error, employee age must be at least 30 years old",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Hasan\",\r\n        \"email\": \"email@hasan.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 27,\r\n        \"position\": \"coordinator\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"100\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/300",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"300"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:05:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee age must be at least 30 years old\"\n}"
+				},
+				{
+					"name": "Error, employee is on leave.",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Mohammed\",\r\n        \"email\": \"email@mohammed.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 33,\r\n        \"position\": \"supervisor\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"300\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"100"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:12:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee is on leave.\"\n}"
+				},
+				{
+					"name": "Employee promoted successfully",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Mohammed\",\r\n        \"email\": \"email@mohammed.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 33,\r\n        \"position\": \"supervisor\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"300\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"100"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:13:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee promoted successfully\"\n}"
+				},
+				{
+					"name": "Error, employee is already a supervisor",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Mohammed\",\r\n        \"email\": \"email@mohammed.com\",\r\n        \"phoneNumber\": \"0501649080\",\r\n        \"age\": 33,\r\n        \"position\": \"supervisor\",\r\n        \"onLeave\": false,\r\n        \"hireDate\": \"2025-05-05\",\r\n        \"annualLeave\": 0,\r\n        \"id\": \"300\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/employee/promote/100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"promote",
+								"100"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Jul 2025 04:14:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Error, employee is already a supervisor\"\n}"
+				}
+			]
+		}
+	]
+}

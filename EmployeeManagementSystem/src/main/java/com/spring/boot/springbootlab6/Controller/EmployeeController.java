@@ -169,7 +169,7 @@ public class EmployeeController {
 //    8. Get Employees with No Annual Leave: Retrieves a list of employees who have
 //          used up all their annual leave.
 
-    @GetMapping("/without-annual-leave")
+    @GetMapping("/filter/without-annual-leave")
     public ResponseEntity<?> listEmployeesWithoutAnnualLeave() {
         ArrayList<Employee> withoutAnnualLeave = new ArrayList<>();
 
