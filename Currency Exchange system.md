@@ -12,15 +12,65 @@
 ## Checklist for validation
 ### **Bank:**  
 - ID: String
-    - @NotNull(message = "ID must not be empty")
-
+    - @NotEmpty(message = "ID must not be empty")
+    - @Size(min = 12, message = "ID must not be less than 12 characters")
 - name: String
-    - @NotNull(message = "name must not be empty")
+    - @NotEmpty(message = "name must not be empty")
+    - @Size(min = 2, message = "name must not be less than 2 characters")
 - location: String  
-    - @NotNull(message = "name must not be empty")
+    - @NotEmpty(message = "name must not be empty")
+    - @Size(min = 15, message = "location must not be less than 15 characters")  
 
-must add the annotations with messages
+### **Customer:**  
+- ID: String
+    - @NotEmpty(message = "ID must not be empty")
+    - @Size(min = 12, message = "ID must not be less than 12 characters")
+- name: String
+    - @NotEmpty(message = "name must not be empty")
+    - @Size(min = 2, message = "name must not be less than 2 characters")
+    - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
+- phoneNumber
+    - @NotNull(message = "Phone number must not be empty")
+    - @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!")
+- InitialCurrency
+    - @NotEmpty(message = "Currency must not be empty")
+    - @Size(min = 3, message = "Currency must not be less than 3 characters")
+    - @Pattern(regexp = "^\\D*$", message = "Currency must not contain numbers")
+- amount 
+    - @PositiveOrZero(message = "The amount must be positive or zero")
 
-the flow of the program (BA).
-deadline tomorrow 9AM
+### **Investor:**  
+- ID: String
+    - @NotEmpty(message = "ID must not be empty")
+    - @Size(min = 12, message = "ID must not be less than 12 characters")
+- name: String
+    - @NotEmpty(message = "name must not be empty")
+    - @Size(min = 2, message = "name must not be less than 2 characters")
+    - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
+- phoneNumber
+    - @NotNull(message = "Phone number must not be empty")
+    - @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!")
+- InitialCurrency
+    - @NotEmpty(message = "Currency must not be empty")
+    - @Size(min = 3, message = "Currency must not be less than 3 characters")
+    - @Pattern(regexp = "^\\D*$", message = "Currency must not contain numbers")
+- amount 
+    - @PositiveOrZero(message = "The amount must be positive or zero")
+- investmentPercentage
+    - @Positive(message = "The investment percentage must be positive")
+    - @Min(value = 20, message = "The minimum investment amount is 20 percent")
+    - @Max(value = 60, message = "The maximum amount of investment is 60 percent")
+- returnOnInvestment
+    - @Pattern(regexp = "^\\d$", message = "retern on investemt must be a number")
 
+### **Card:**  
+- ID: String
+    - @NotEmpty(message = "ID must not be empty")
+    - @Size(min = 12, message = "ID must not be less than 12 characters")
+- name: String
+    - @NotEmpty(message = "name must not be empty")
+    - @Size(min = 2, message = "name must not be less than 2 characters")
+    - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
+- hasNFCPayment
+- cvcPassword
+- securityCode
