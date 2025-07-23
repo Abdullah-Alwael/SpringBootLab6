@@ -29,14 +29,14 @@
     - @NotEmpty(message = "name must not be empty")
     - @Size(min = 2, message = "name must not be less than 2 characters")
     - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
-- phoneNumber
+- phoneNumber: String
     - @NotNull(message = "Phone number must not be empty")
     - @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!")
-- InitialCurrency
+- InitialCurrency: String
     - @NotEmpty(message = "Currency must not be empty")
     - @Size(min = 3, message = "Currency must not be less than 3 characters")
     - @Pattern(regexp = "^\\D*$", message = "Currency must not contain numbers")
-- amount 
+- amount: Double 
     - @PositiveOrZero(message = "The amount must be positive or zero")
 
 ### **Investor:**  
@@ -47,20 +47,20 @@
     - @NotEmpty(message = "name must not be empty")
     - @Size(min = 2, message = "name must not be less than 2 characters")
     - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
-- phoneNumber
+- phoneNumber: String
     - @NotNull(message = "Phone number must not be empty")
     - @Pattern(regexp = "^05\\d{8}$", message = "phone number must start with 05 and must be 10 digits only!")
-- InitialCurrency
+- InitialCurrency: Currency
     - @NotEmpty(message = "Currency must not be empty")
     - @Size(min = 3, message = "Currency must not be less than 3 characters")
     - @Pattern(regexp = "^\\D*$", message = "Currency must not contain numbers")
-- amount 
+- amount: Double 
     - @PositiveOrZero(message = "The amount must be positive or zero")
-- investmentPercentage
+- investmentPercentage: Integer
     - @Positive(message = "The investment percentage must be positive")
     - @Min(value = 20, message = "The minimum investment amount is 20 percent")
     - @Max(value = 60, message = "The maximum amount of investment is 60 percent")
-- returnOnInvestment
+- returnOnInvestment: Double
     - @Pattern(regexp = "^\\d$", message = "retern on investemt must be a number")
 
 ### **Card:**  
@@ -71,6 +71,11 @@
     - @NotEmpty(message = "name must not be empty")
     - @Size(min = 2, message = "name must not be less than 2 characters")
     - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
-- hasNFCPayment
-- cvcPassword
-- securityCode
+- hasNFCPayment: boolean
+    - @AssertTrue(message = "NFC payment must be initially true")
+- cvcPassword: String
+    - @NotEmpty(message = "CVC password must not be empty")
+    - @Size(min = 3, max = 3, message = "CVC password is always 3 characters")
+- securityCode: String
+    - @NotEmpty(message = "security code must not be empty")
+    - @Size(min = 3, max = 3, message = "security code is always 3 characters")
