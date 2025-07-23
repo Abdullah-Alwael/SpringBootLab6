@@ -71,7 +71,7 @@
     - @NotEmpty(message = "name must not be empty")
     - @Size(min = 2, message = "name must not be less than 2 characters")
     - @Pattern(regexp = "^\\D*$", message = "name must not contain numbers")
-- hasNFCPayment: boolean
+- hasNFCPayment: Boolean
     - @AssertTrue(message = "NFC payment must be initially true")
 - cvcPassword: String
     - @NotEmpty(message = "CVC password must not be empty")
